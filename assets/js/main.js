@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  var mq = window.matchMedia('(max-width: 900px)');
+  var mq = window.matchMedia('(max-width: 1100px)');
 
   /* ---- mobile nav open/close ---- */
   var toggle = document.querySelector('.site-nav__toggle');
@@ -70,7 +70,16 @@
     }
   });
 
-  mq.addEventListener('change', closeMenu);
+  // Close navigation after choosing a submenu/menu link on compact layouts.
+  document.querySelectorAll('.nav-list a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (mq.matches) closeMenu();
+    });
+  });
+
+  // MatchMedia change listener with Safari fallback.
+  if (mq.addEventListener) mq.addEventListener('change', closeMenu);
+  else if (mq.addListener) mq.addListener(closeMenu);
 
   /* ---- depth-ruler reveal (home hero) ---- */
   var ruler = document.querySelector('.ruler');

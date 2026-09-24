@@ -10,3 +10,180 @@
 @media(max-width:700px){.floating-actions{right:12px;bottom:12px}.floating-action{width:48px;height:48px}.theme-switcher{left:10px;bottom:10px}.editor-toolbar{bottom:8px;justify-content:center}.site-nav__logo span{max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
 .contact-legal-links{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--c-line);font-size:var(--t-sm);color:var(--c-ink-soft)}.contact-legal-links a{color:var(--c-laterite-d)}
 .site-nav__logo img[data-config-logo]{display:block;object-fit:contain;border-radius:8px}.site-footer__brand>img{display:block;object-fit:contain;margin-bottom:.8rem}
+
+/* ========================================================================== 
+   Responsive navigation / mega-menu reliability fix
+   - avoids cramped desktop navigation on small laptops/tablets
+   - keeps long drilling lists inside the viewport
+   - uses a predictable accordion on touch/mobile layouts
+   ========================================================================== */
+
+/* Desktop mega menus: align from the triggering item and keep inside viewport. */
+@media (min-width: 1101px) {
+  .nav-list { gap: clamp(.85rem, 1.45vw, var(--space-4)); }
+  .nav-list > li { position: relative; }
+
+  .mega {
+    left: 0;
+    right: auto;
+    transform: translateY(6px);
+    width: min(640px, calc(100vw - 32px));
+    max-height: min(70dvh, 560px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+  .mega--cleaning {
+    width: min(440px, calc(100vw - 32px));
+  }
+  .nav-list > li:hover > .mega,
+  .nav-list > li:focus-within > .mega,
+  .mega.is-open {
+    transform: translateY(0);
+  }
+
+  /* Drilling has many links: 3 compact columns on wide screens. */
+  .mega--drilling .mega__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .2rem .75rem;
+  }
+  .mega__link {
+    line-height: 1.3;
+    min-height: 2.55rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Switch to hamburger sooner so tablet/small-laptop widths do not crush nav. */
+@media (max-width: 1100px) {
+  .site-nav__toggle {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .site-nav__inner {
+    position: relative;
+    min-height: 4.6rem;
+  }
+
+  .site-nav__logo {
+    min-width: 0;
+    max-width: calc(100% - 64px);
+  }
+  .site-nav__logo span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 910;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
+    border-top: 0;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: 0 18px 35px rgba(0,0,0,.18);
+    padding: .35rem var(--space-4) var(--space-4);
+    max-height: calc(100dvh - 5.25rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-list.is-open { display: flex; }
+
+  .nav-list > li {
+    width: 100%;
+    border-top: 1px solid var(--c-line);
+  }
+  .nav-list > li:first-child { border-top: 0; }
+
+  .nav-list > li > a,
+  .nav-list > li > .nav-list__btn {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    padding: .8rem .15rem;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .nav-list a.is-active::after { display: none; }
+  .nav-cta {
+    width: 100%;
+    justify-content: center !important;
+    margin-top: .65rem;
+  }
+
+  /* Mobile/tablet mega menu = explicit accordion. */
+  .mega,
+  .mega--cleaning {
+    display: none;
+    position: static;
+    width: 100%;
+    max-height: none;
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    background: var(--c-bg);
+    padding: .35rem .55rem .75rem;
+    margin: 0 0 .35rem;
+  }
+  .mega.is-open { display: block; }
+
+  .mega__grid,
+  .mega--drilling .mega__grid,
+  .mega--cleaning .mega__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .mega__link,
+  .mega__all {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: .7rem .8rem;
+    line-height: 1.35;
+    border-radius: var(--radius);
+  }
+  .mega__link + .mega__link { border-top: 1px solid color-mix(in srgb, var(--c-line) 75%, transparent); }
+  .mega__all {
+    margin-top: .35rem;
+    border-top: 1px solid var(--c-line);
+    font-weight: 700;
+  }
+
+  /* Do not let hover/focus pseudo-open a collapsed accordion. */
+  .nav-list > li:hover > .mega:not(.is-open),
+  .nav-list > li:focus-within > .mega:not(.is-open) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav__inner { min-height: 4.25rem; }
+  .nav-list { max-height: calc(100dvh - 4.25rem); padding-inline: .85rem; }
+  .site-nav__logo b { font-size: 1.05rem; }
+  .site-nav__logo span { max-width: min(64vw, 230px); }
+  .mega { padding-inline: .35rem; }
+  .mega__link, .mega__all { font-size: .9rem; }
+}
