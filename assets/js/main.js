@@ -12,6 +12,23 @@
   var toggle = document.querySelector('.site-nav__toggle');
   var list = document.querySelector('.nav-list');
 
+
+  /* Compact off-canvas drawer helpers for tablet/mobile. */
+  var backdrop = null;
+  var drawerClose = null;
+  if (list) {
+    var closeItem = document.createElement('li');
+    closeItem.className = 'nav-drawer__close-item';
+    closeItem.innerHTML = '<button class="nav-drawer__close" type="button"><span>← View webpage</span><span class="nav-drawer__close-symbol" aria-hidden="true">×</span></button>';
+    list.insertBefore(closeItem, list.firstChild);
+    drawerClose = closeItem.querySelector('.nav-drawer__close');
+
+    backdrop = document.createElement('div');
+    backdrop.className = 'nav-drawer-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+  }
+
   /* Keep dropdowns exactly below the sticky header on every viewport. */
   var nav = document.querySelector('.site-nav');
   var navMetricRaf = 0;
@@ -34,6 +51,8 @@
   function closeMenu() {
     if (!list) return;
     list.classList.remove('is-open');
+    document.body.classList.remove('nav-drawer-open');
+    if (backdrop) backdrop.setAttribute('aria-hidden', 'true');
     if (toggle) toggle.setAttribute('aria-expanded', 'false');
     document.querySelectorAll('.mega.is-open').forEach(function (m) {
       m.classList.remove('is-open');
@@ -47,9 +66,13 @@
       updateNavMenuTop();
       var open = list.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('nav-drawer-open', open && mq.matches);
+      if (backdrop) backdrop.setAttribute('aria-hidden', String(!(open && mq.matches)));
       if (!open) closeMenu();
     });
   }
+  if (drawerClose) drawerClose.addEventListener('click', closeMenu);
+  if (backdrop) backdrop.addEventListener('click', closeMenu);
 
   /* ---- dropdown buttons (accordion on mobile, click-toggle on desktop) ---- */
   document.querySelectorAll('.nav-list__btn').forEach(function (btn) {
