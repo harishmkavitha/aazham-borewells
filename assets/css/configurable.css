@@ -287,7 +287,7 @@
     flex-direction: column !important;
     align-items: stretch !important;
     gap: 0 !important;
-    z-index: 9997 !important;
+    z-index: 10001 !important;
     padding: .25rem max(1rem, env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left)) !important;
     background: var(--c-surface) !important;
     border: 0 !important;
@@ -368,7 +368,7 @@
 }
 
 /* ========================================================================== 
-   NAVIGATION V3 — compact off-canvas drawer on tablet/mobile
+   NAVIGATION V4 — verified off-canvas drawer on tablet/mobile
    Keeps part of the webpage visible and gives visitors an explicit way back.
    ========================================================================== */
 .nav-drawer-backdrop { display: none; }
@@ -376,6 +376,10 @@
 
 @media (max-width: 1180px) {
   body.nav-drawer-open { overflow: hidden; }
+  /* The drawer lives inside .site-nav. Raise the ENTIRE nav stacking context above
+     the body-level backdrop; child z-index values alone cannot escape a parent
+     stacking context. */
+  body.nav-drawer-open .site-nav { z-index: 10000 !important; }
 
   .nav-drawer-backdrop {
     display: block;
@@ -384,10 +388,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9996;
-    background: rgba(20, 18, 14, .34);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+    z-index: 9998;
+    background: rgba(20, 18, 14, .38);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -416,7 +418,7 @@
     flex-direction: column !important;
     align-items: stretch !important;
     gap: 0 !important;
-    z-index: 9997 !important;
+    z-index: 10001 !important;
     padding: 0 max(.85rem, env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) .85rem !important;
     background: var(--c-surface) !important;
     border: 0 !important;
@@ -426,6 +428,11 @@
     visibility: hidden !important;
     pointer-events: none !important;
     transition: transform 200ms ease, visibility 200ms ease !important;
+  }
+
+  body.nav-drawer-open .floating-actions,
+  body.nav-drawer-open .theme-switcher {
+    pointer-events: none !important;
   }
   .nav-list.is-open {
     transform: translateX(0) !important;

@@ -19,7 +19,7 @@
   if (list) {
     var closeItem = document.createElement('li');
     closeItem.className = 'nav-drawer__close-item';
-    closeItem.innerHTML = '<button class="nav-drawer__close" type="button"><span>← View webpage</span><span class="nav-drawer__close-symbol" aria-hidden="true">×</span></button>';
+    closeItem.innerHTML = '<button class="nav-drawer__close" type="button"><span>← Close menu</span><span class="nav-drawer__close-symbol" aria-hidden="true">×</span></button>';
     list.insertBefore(closeItem, list.firstChild);
     drawerClose = closeItem.querySelector('.nav-drawer__close');
 

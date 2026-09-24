@@ -1,0 +1,25 @@
+Mobile navigation V4 verification
+
+Root cause fixed:
+- The body-level backdrop had a z-index above the .site-nav stacking context, so it visually dimmed and intercepted clicks over the drawer.
+- Floating actions were also in a separate stacking layer.
+
+Fix:
+- Raise .site-nav stacking context to z-index 10000 only while drawer is open.
+- Backdrop uses z-index 9998 and sits below the entire nav.
+- Drawer uses z-index 10001 inside the raised nav context.
+- Removed backdrop-filter blur entirely.
+- Floating theme/call/WhatsApp controls are non-interactive while drawer is open and remain below the backdrop.
+- Close control relabeled clearly as Close menu.
+
+Chromium interaction tests at 390x844:
+PASS: drawer opens and pointer-events = auto
+PASS: backdrop pointer-events = auto only outside drawer
+PASS: elementFromPoint over Home returns the Home anchor (drawer is not covered)
+PASS: Drilling accordion opens
+PASS: first Drilling submenu item is clickable
+PASS: last Drilling submenu item is scrollable into view and clickable
+PASS: last Cleaning submenu item is scrollable into view and clickable
+PASS: Close menu control closes drawer
+PASS: tapping visible webpage strip closes drawer
+PASS: backdrop-filter computed value = none
