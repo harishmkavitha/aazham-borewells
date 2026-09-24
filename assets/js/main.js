@@ -6,11 +6,30 @@
 (function () {
   'use strict';
 
-  var mq = window.matchMedia('(max-width: 1100px)');
+  var mq = window.matchMedia('(max-width: 1180px)');
 
   /* ---- mobile nav open/close ---- */
   var toggle = document.querySelector('.site-nav__toggle');
   var list = document.querySelector('.nav-list');
+
+  /* Keep dropdowns exactly below the sticky header on every viewport. */
+  var nav = document.querySelector('.site-nav');
+  var navMetricRaf = 0;
+  function updateNavMenuTop() {
+    if (!nav) return;
+    var bottom = Math.max(0, Math.round(nav.getBoundingClientRect().bottom));
+    document.documentElement.style.setProperty('--nav-menu-top', bottom + 'px');
+  }
+  function scheduleNavMetricUpdate() {
+    if (navMetricRaf) return;
+    navMetricRaf = window.requestAnimationFrame(function () {
+      navMetricRaf = 0;
+      updateNavMenuTop();
+    });
+  }
+  updateNavMenuTop();
+  window.addEventListener('resize', scheduleNavMetricUpdate, { passive: true });
+  window.addEventListener('scroll', scheduleNavMetricUpdate, { passive: true });
 
   function closeMenu() {
     if (!list) return;
@@ -25,6 +44,7 @@
 
   if (toggle && list) {
     toggle.addEventListener('click', function () {
+      updateNavMenuTop();
       var open = list.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
       if (!open) closeMenu();
@@ -38,6 +58,7 @@
 
     btn.addEventListener('click', function (e) {
       e.preventDefault();
+      updateNavMenuTop();
       var isOpen = mega.classList.contains('is-open');
       // close siblings
       document.querySelectorAll('.mega.is-open').forEach(function (m) {

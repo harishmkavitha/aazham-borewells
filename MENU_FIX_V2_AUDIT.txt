@@ -1,0 +1,20 @@
+Navigation V2 verification
+==========================
+Tested with headless Chromium using the actual nav HTML + production CSS/JS.
+
+Viewports tested:
+- 1440 x 900 desktop: Drilling 16/16 links visible; Cleaning 6/6 links visible.
+- 1280 x 720 desktop: Drilling 16/16 links visible; Cleaning 6/6 links visible.
+- 1180 x 820 tablet: accordion opens; all 16 Drilling links accessible by nav scroll.
+- 1024 x 768 tablet: accordion opens; all 16 Drilling links accessible by nav scroll.
+- 430 x 932 phone: accordion opens; all 16 Drilling links accessible by nav scroll.
+- 390 x 844 iPhone-class phone: accordion opens; all 16 Drilling links accessible by nav scroll.
+
+Changes:
+- Desktop dropdown is click-state driven; legacy hover/focus cannot open it accidentally.
+- Dropdown is fixed directly below sticky header and constrained to viewport.
+- No pointer gap between trigger and menu.
+- Tablet/mobile uses a full-width scrollable navigation and explicit accordion.
+- Breakpoint moved to 1180px to prevent cramped small-laptop navigation.
+- Opening Cleaning automatically closes Drilling and vice versa.
+- Header bottom position is recalculated on load, resize, scroll, and open.
