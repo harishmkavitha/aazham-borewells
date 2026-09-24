@@ -1,0 +1,30 @@
+Aazham Borewells - Configurable GitHub Pages Architecture Audit
+
+Implemented:
+- One static GitHub Pages codebase supports multiple customers via ?client=<ClientID>
+- Sticky responsive menu retains business name and mobile navigation
+- Favicon and configurable logo path
+- Floating WhatsApp + Call buttons use configured phone numbers
+- Excel workbook: config/site-config.xlsx
+- Runtime JSON: config/site-config.json
+- GitHub Action converts Excel -> JSON after workbook push
+- Configurable business details, map, social/business links
+- Configurable theme color tokens
+- Configurable typography and Google Fonts URL
+- Per-page Enabled / MenuVisible / ContentVisible controls
+- Stable unique section IDs on every section
+- Section visibility configuration support
+- Home and Contact fully visible in demo-002; other demo pages keep menu access but show restricted content
+- WhatsApp contact form includes name, phone, email, service, area and message
+- Privacy Policy, Terms & Conditions and XML Sitemap links on Contact/footer
+- End-user color/theme picker with browser persistence
+- editor.html client visual editor
+- Text editing, image replacement, link editing, video/YouTube URL editing
+- Per-element restore, undo, hide selected, reset page, export edits
+- Editor changes persist through browser refresh using localStorage
+- Client query parameter is preserved across internal navigation
+- All local HTML/CSS/JS/image references audited with no missing references
+- Section IDs audited with no duplicate IDs
+
+Important static-hosting note:
+Browser editor saves are local to that browser/device. Permanent cross-device publishing requires exporting edits into configuration or adding authenticated remote storage/publishing.

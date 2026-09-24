@@ -1,0 +1,11 @@
+Batch 2 completed - Drilling Services hub + first four drilling service pages
+
+Responsive breakpoint: max-width 767px uses -mobile.webp. Desktop filenames remain exactly the original website filenames.
+
+1) drilling-services.html: hub-drilling.webp / hub-drilling-mobile.webp
+2) borewell-drilling-services.html: svc-borewell-drilling-services.webp / -mobile.webp
+3) borewell-rig-drilling-services.html: svc-borewell-rig-drilling-services.webp / -mobile.webp
+4) galaxy-drilling-services.html: svc-galaxy-drilling-services.webp / -mobile.webp
+5) dth-method-drilling-services.html: svc-dth-method-drilling-services.webp / -mobile.webp
+
+Matching service-card thumb files are also replaced for the four service pages. Batch 1 Home + About replacements are carried forward.

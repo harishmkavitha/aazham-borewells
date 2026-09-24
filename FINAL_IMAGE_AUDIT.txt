@@ -1,0 +1,11 @@
+Aazham Borewells final image audit
+WEBP photo files: 118
+Referenced WEBP photo files: 118
+Unused WEBP photo files: 0
+Missing referenced WEBP photo files: 0
+Desktop photo files: 59
+Mobile photo files: 59
+Desktop photos without a mobile companion: 0
+Photographs identical to original source site: 0
+
+Replacement photography rules: adult workers only; India/Tamil Nadu context; no company or competitor names, logos, readable uniform/vehicle/equipment branding, or watermarks.

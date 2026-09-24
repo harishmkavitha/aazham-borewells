@@ -1,0 +1,4 @@
+Total WEBP photo files: 114
+Referenced WEBP files: 114
+Unused WEBP files: 0
+Missing referenced files: 0

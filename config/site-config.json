@@ -1,0 +1,510 @@
+{
+  "version": 1,
+  "defaultClient": "aazham",
+  "customers": {
+    "aazham": {
+      "business": {
+        "name": "Aazham Borewells",
+        "phoneDisplay": "+91 98400 55123",
+        "phoneDigits": "919840055123",
+        "whatsappDigits": "919840055123",
+        "email": "hello@aazhamborewells.com",
+        "address": "No. 88, Arcot Road, Vadapalani, Chennai, Tamil Nadu 600026",
+        "googleMapEmbed": "https://maps.google.com/maps?q=Vadapalani,Chennai&t=&z=14&ie=UTF8&iwloc=&output=embed",
+        "googleMapLink": "https://maps.google.com/?q=Vadapalani,Chennai",
+        "summary": "Borewell drilling, cleaning and groundwater specialists working across Chennai and Tamil Nadu since 1979.",
+        "logoPath": "assets/img/logo.svg",
+        "faviconPath": "assets/img/favicon.svg"
+      },
+      "theme": {
+        "bg": "#e7e5df",
+        "surface": "#f4f2ee",
+        "surface2": "#ded9cd",
+        "text": "#201d18",
+        "mutedText": "#5c5648",
+        "primary": "#bd5327",
+        "primaryDark": "#96401d",
+        "primaryLight": "#d9744a",
+        "secondary": "#1a6560",
+        "secondaryLight": "#3f9089",
+        "accent": "#c9992f",
+        "dark": "#221e18",
+        "dark2": "#2c271f",
+        "onDark": "#f0ebe1",
+        "line": "#cbc5b8"
+      },
+      "typography": {
+        "headingFamily": "\"Archivo\", system-ui, sans-serif",
+        "bodyFamily": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "baseSize": "1rem",
+        "smallSize": "0.9rem",
+        "largeSize": "1.2rem",
+        "googleFontUrl": "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      },
+      "links": {
+        "facebook": "",
+        "linkedin": "",
+        "instagram": "",
+        "pinterest": "",
+        "twitter": "",
+        "indiamart": "",
+        "justdial": ""
+      },
+      "pages": {
+        "404.html": {
+          "label": "404",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "about.html": {
+          "label": "About",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-cleaning-methods.html": {
+          "label": "Cleaning Methods",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-cleaning-process.html": {
+          "label": "Cleaning Process",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-cleaning.html": {
+          "label": "Borewell Cleaning",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-compressor-drilling.html": {
+          "label": "Compressor Drilling",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-drilling-services.html": {
+          "label": "Borewell Drilling Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-groundwater-survey.html": {
+          "label": "Groundwater Survey",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-installation-of-pumps.html": {
+          "label": "Pump Installation",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-motor-line-cleaning.html": {
+          "label": "Motor Line Cleaning",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-pebbles.html": {
+          "label": "Gravel & Pebble Packing",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-pipe-line-cleaning.html": {
+          "label": "Pipe Line Cleaning",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-plumbing.html": {
+          "label": "Borewell Plumbing",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-rain-harvesting.html": {
+          "label": "Rain Water Harvesting",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-repair-and-maintenance.html": {
+          "label": "Repair & Maintenance",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-rig-drilling-services.html": {
+          "label": "Rig Drilling Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-soil-test-and-pile-test.html": {
+          "label": "Soil Test & Pile Test",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-water-quality-and-quantity.html": {
+          "label": "Water Quality & Quantity",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "borewell-water-yield.html": {
+          "label": "Water Yield Test",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "cleaning-services.html": {
+          "label": "Cleaning Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "contact.html": {
+          "label": "Contact",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "domestic-borewell-point-survey.html": {
+          "label": "Point Survey",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "drilling-services.html": {
+          "label": "Drilling Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "dth-method-drilling-services.html": {
+          "label": "DTH Method Drilling",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "galaxy-drilling-services.html": {
+          "label": "Galaxy Drilling Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "gallery.html": {
+          "label": "Gallery",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "index.html": {
+          "label": "Home",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "privacy.html": {
+          "label": "Privacy Policy",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "terms.html": {
+          "label": "Terms & Conditions",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "testimonial.html": {
+          "label": "Testimonials",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        }
+      },
+      "sections": {},
+      "content": {
+        "home.hero.eyebrow": {
+          "type": "text",
+          "value": "Borewell specialists \u00b7 Chennai \u00b7 since 1979"
+        },
+        "home.hero.title": {
+          "type": "html",
+          "value": "We go down until we find <em>water</em>."
+        }
+      },
+      "media": {
+        "home.hero.desktop": {
+          "type": "image",
+          "value": "assets/img/photos/home-hero.webp"
+        },
+        "home.hero.mobile": {
+          "type": "image",
+          "value": "assets/img/photos/home-hero-mobile.webp"
+        }
+      }
+    },
+    "demo-002": {
+      "business": {
+        "name": "Demo Borewell Services",
+        "phoneDisplay": "+91 90000 00000",
+        "phoneDigits": "919000000000",
+        "whatsappDigits": "919000000000",
+        "email": "demo@example.com",
+        "address": "Chennai, Tamil Nadu",
+        "googleMapEmbed": "https://maps.google.com/maps?q=Vadapalani,Chennai&t=&z=14&ie=UTF8&iwloc=&output=embed",
+        "googleMapLink": "https://maps.google.com/?q=Vadapalani,Chennai",
+        "summary": "Professional borewell drilling, cleaning and groundwater solutions.",
+        "logoPath": "assets/img/logo.svg",
+        "faviconPath": "assets/img/favicon.svg"
+      },
+      "theme": {
+        "bg": "#e7e5df",
+        "surface": "#f4f2ee",
+        "surface2": "#ded9cd",
+        "text": "#201d18",
+        "mutedText": "#5c5648",
+        "primary": "#0b6f8c",
+        "primaryDark": "#075269",
+        "primaryLight": "#2a91ad",
+        "secondary": "#2e7d32",
+        "secondaryLight": "#5ba85e",
+        "accent": "#d49b21",
+        "dark": "#221e18",
+        "dark2": "#2c271f",
+        "onDark": "#f0ebe1",
+        "line": "#cbc5b8"
+      },
+      "typography": {
+        "headingFamily": "\"Archivo\", system-ui, sans-serif",
+        "bodyFamily": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "baseSize": "1rem",
+        "smallSize": "0.9rem",
+        "largeSize": "1.2rem",
+        "googleFontUrl": "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      },
+      "links": {
+        "facebook": "",
+        "linkedin": "",
+        "instagram": "",
+        "pinterest": "",
+        "twitter": "",
+        "indiamart": "",
+        "justdial": ""
+      },
+      "pages": {
+        "404.html": {
+          "label": "404",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "about.html": {
+          "label": "About",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-cleaning-methods.html": {
+          "label": "Cleaning Methods",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-cleaning-process.html": {
+          "label": "Cleaning Process",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-cleaning.html": {
+          "label": "Borewell Cleaning",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-compressor-drilling.html": {
+          "label": "Compressor Drilling",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-drilling-services.html": {
+          "label": "Borewell Drilling Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-groundwater-survey.html": {
+          "label": "Groundwater Survey",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-installation-of-pumps.html": {
+          "label": "Pump Installation",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-motor-line-cleaning.html": {
+          "label": "Motor Line Cleaning",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-pebbles.html": {
+          "label": "Gravel & Pebble Packing",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-pipe-line-cleaning.html": {
+          "label": "Pipe Line Cleaning",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-plumbing.html": {
+          "label": "Borewell Plumbing",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-rain-harvesting.html": {
+          "label": "Rain Water Harvesting",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-repair-and-maintenance.html": {
+          "label": "Repair & Maintenance",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-rig-drilling-services.html": {
+          "label": "Rig Drilling Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-soil-test-and-pile-test.html": {
+          "label": "Soil Test & Pile Test",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-water-quality-and-quantity.html": {
+          "label": "Water Quality & Quantity",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "borewell-water-yield.html": {
+          "label": "Water Yield Test",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "cleaning-services.html": {
+          "label": "Cleaning Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "contact.html": {
+          "label": "Contact",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "domestic-borewell-point-survey.html": {
+          "label": "Point Survey",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "drilling-services.html": {
+          "label": "Drilling Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "dth-method-drilling-services.html": {
+          "label": "DTH Method Drilling",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "galaxy-drilling-services.html": {
+          "label": "Galaxy Drilling Services",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "gallery.html": {
+          "label": "Gallery",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        },
+        "index.html": {
+          "label": "Home",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "privacy.html": {
+          "label": "Privacy Policy",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "terms.html": {
+          "label": "Terms & Conditions",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": true
+        },
+        "testimonial.html": {
+          "label": "Testimonials",
+          "enabled": true,
+          "menuVisible": true,
+          "contentVisible": false
+        }
+      },
+      "sections": {},
+      "content": {
+        "home.hero.eyebrow": {
+          "type": "text",
+          "value": "Professional groundwater solutions"
+        },
+        "home.hero.title": {
+          "type": "html",
+          "value": "Reliable water solutions for your property."
+        }
+      },
+      "media": {
+        "home.hero.desktop": {
+          "type": "image",
+          "value": "assets/img/photos/home-hero.webp"
+        },
+        "home.hero.mobile": {
+          "type": "image",
+          "value": "assets/img/photos/home-hero-mobile.webp"
+        }
+      }
+    }
+  }
+}
